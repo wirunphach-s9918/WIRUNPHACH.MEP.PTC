@@ -90,7 +90,7 @@
        </svg>
       </div>
       <h1 id="app-title" class="font-bold mb-2" style="background: linear-gradient(135deg, #EC4899 0%, #8B5CF6 50%, #3B82F6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.6; font-size: 1.125rem;">ระบบเช็คการมาเรียน นักเรียน MEP โรงเรียนประตูชัย</h1>
-      <p class="font-bold mb-6" style="background: linear-gradient(135deg, #EC4899 0%, #8B5CF6 50%, #3B82F6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.6; font-size: 1.125rem;">สำนักงานเขตพื้นที่การศึกษาประถมศึกษาพระนครศรีอยุธยา เขต 1 </p>
+      <p class="font-bold mb-6" style="background: linear-gradient(135deg, #EC4899 0%, #8B5CF6 50%, #3B82F6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.6; font-size: 1.125rem;">สำนักงานเขตพื้นที่การศึกษาประถมศึกษาพระนครศรีอยุธยา เขต 1</p>
       <div class="inline-block p-4 bg-pink-50 rounded-2xl mb-8">
        <p class="text-pink-600 font-medium">📚 กรุณาเลือกห้องเรียนเพื่อเริ่มเช็คชื่อ</p>
       </div><!-- Classroom Selection Grid -->
@@ -139,12 +139,12 @@
       <h1 class="text-3xl font-bold text-white mb-2">เช็คชื่อ <span id="current-classroom-title"></span></h1>
       <p id="buddhist-date-display" class="text-white text-opacity-90 text-lg font-medium"></p>
      </header><!-- Main Content -->
-     <main class="bg-white rounded-2xl shadow-2xl p-6 mb-6"><!-- Load Default Students Button (Only for ป.1/5) -->
+     <main class="bg-white rounded-2xl shadow-2xl p-6 mb-6"><!-- Load Default Students Button -->
       <div id="load-default-section" style="display: none;" class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-4 mb-6 border-2 border-blue-200">
        <div class="flex items-center justify-between">
         <div>
-         <h3 class="text-lg font-bold text-gray-800 mb-1">🎯 โหลดรายชื่อเริ่มต้น ป.1/5</h3>
-         <p class="text-sm text-gray-600">เพิ่มนักเรียน 10 คนให้อัตโนมัติ (กดเพียงครั้งเดียว)</p>
+         <h3 id="load-default-title" class="text-lg font-bold text-gray-800 mb-1">🎯 โหลดรายชื่อเริ่มต้น</h3>
+         <p class="text-sm text-gray-600">เพิ่มนักเรียนให้อัตโนมัติ (กดเพียงครั้งเดียว)</p>
         </div><button id="load-default-btn" class="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-medium hover:from-blue-600 hover:to-purple-600 transition-all shadow-lg hover:shadow-xl"> โหลดรายชื่อ </button>
        </div>
       </div><!-- Add Student Form -->
@@ -218,7 +218,177 @@
       'Chayaphol',
       'Ronnapee',
       'Teesiriwut',
-      'Karnrawee'
+      'Karnrawee',
+      'Saranya',
+      'Kankanit',
+      'Kamonphan',
+      'Jarawee',
+      'Sunattha',
+      'Smita',
+      'Kiratiya',
+      'Suchapon',
+      'Pornpimol',
+      'Patcharanat',
+      'Kamonwan',
+      'Phawitvhaya',
+      'Paphawarin',
+      'Khakhanan',
+      'Natthakrita',
+      'Papitchaya',
+      'Pichayatida',
+      'Namthip',
+      'Niruemon',
+      'Thanchanok'
+    ];
+
+    // Default students for ป.2/5
+    const DEFAULT_STUDENTS_P2_5 = [
+      'Phattaraphon',
+      'Aekkasit',
+      'Pinyapat',
+      'Meythasit',
+      'Nuttrin',
+      'Naphat C.',
+      'Meekhun',
+      'Woraprach',
+      'Achawin',
+      'Penthai',
+      'Rattanapon',
+      'Sukrit',
+      'Thanawat',
+      'Natthaphon',
+      'Kamonpop',
+      'Natchanok',
+      'Pawarisa K.',
+      'Rada',
+      'Aomsin',
+      'Pathitta',
+      'Rawinnipa',
+      'Pawarisa',
+      'Tananrada',
+      'Punnada',
+      'Ariyada',
+      'Taksiyanan',
+      'Wanatsaya',
+      'Supichaya',
+      'Punthita',
+      'Naphat'
+    ];
+
+    // Default students for ป.3/5
+    const DEFAULT_STUDENTS_P3_5 = [
+      'Phakin',
+      'Natthapak',
+      'Thanatip',
+      'Suppanut',
+      'Weepatthanon',
+      'Jittipat',
+      'Chitiphat',
+      'Wiphuth',
+      'Natthan',
+      'Wanwisa',
+      'Narasita',
+      'Woranit',
+      'Sikarin',
+      'Phinyada',
+      'Natthanicha',
+      'Nichaphat',
+      'Napatsawan',
+      'Niphathon',
+      'Thanatcha',
+      'Wanida',
+      'Promthep',
+      'Thunchanok'
+    ];
+
+    // Default students for ป.4/5
+    const DEFAULT_STUDENTS_P4_5 = [
+      'Sakkarin',
+      'Napat',
+      'Tanawit',
+      'Phurithat',
+      'Thanutchai',
+      'Pakin',
+      'Napat',
+      'Kontanya',
+      'Chaiwalun',
+      'Guntee',
+      'Papungkorn',
+      'Pornchanok',
+      'Peeraya',
+      'Dakanda',
+      'Chompunuch',
+      'Nantawadee',
+      'Chayanin',
+      'Pawanrat',
+      'Rarida',
+      'Kanapat',
+      'Nonlaphan',
+      'Anshisa',
+      'Alisa',
+      'Bunyaporn',
+      'Pachrapa',
+      'Thana'
+    ];
+
+    // Default students for ป.5/5
+    const DEFAULT_STUDENTS_P5_5 = [
+      'Tanatarn',
+      'Thanakorn',
+      'Sorravich',
+      'Rachatapol',
+      'Kanin',
+      'Cheewanon',
+      'Kaweewat',
+      'Napagon',
+      'Tanakrit',
+      'Pattarachanon',
+      'Teetat',
+      'Wethaka',
+      'Apisarawan',
+      'Tachinee',
+      'Yadawasu',
+      'Pitchayaphak',
+      'Kankamonsorn',
+      'Thitikan',
+      'Nakhwan',
+      'Sunisa',
+      'Anyarin',
+      'Kanyapat',
+      'Wanisa'
+    ];
+
+    // Default students for ป.6/5
+    const DEFAULT_STUDENTS_P6_5 = [
+      'Keisuke',
+      'Teerasak',
+      'Patompporn',
+      'Phattharaphon',
+      'Chanokpon',
+      'Jirat',
+      'Thanapat',
+      'Natthakit',
+      'Nunpipat',
+      'Yodthong',
+      'Kannawat',
+      'Suthipong',
+      'Phisitchai',
+      'Ekwali',
+      'Wachirawit',
+      'Thanabhum',
+      'Yossaphat',
+      'Nattapon',
+      'Natthanan',
+      'Napichaya',
+      'Nava',
+      'Napatsanun',
+      'Nichnipha',
+      'Payla',
+      'Phiraporn',
+      'Boonyanuch',
+      'Pawarisa',
+      'Thunyachanok',
+      'Wasuthida'
     ];
 
     let allRecords = [];
@@ -264,6 +434,24 @@
       if (displayEl) {
         displayEl.textContent = `วันที่: ${toBuddhistYear(currentDate)}`;
       }
+    }
+
+    // Get default students by classroom
+    function getDefaultStudents(classroom) {
+      if (classroom === 'ป.1/5') {
+        return DEFAULT_STUDENTS_P1_5;
+      } else if (classroom === 'ป.2/5') {
+        return DEFAULT_STUDENTS_P2_5;
+      } else if (classroom === 'ป.3/5') {
+        return DEFAULT_STUDENTS_P3_5;
+      } else if (classroom === 'ป.4/5') {
+        return DEFAULT_STUDENTS_P4_5;
+      } else if (classroom === 'ป.5/5') {
+        return DEFAULT_STUDENTS_P5_5;
+      } else if (classroom === 'ป.6/5') {
+        return DEFAULT_STUDENTS_P6_5;
+      }
+      return [];
     }
 
     // Initialize app
@@ -373,11 +561,18 @@
     }
 
     function loadDefaultStudents() {
+      const defaultStudents = getDefaultStudents(currentClassroom);
+
+      if (defaultStudents.length === 0) {
+        showToast('ไม่มีรายชื่อเริ่มต้นสำหรับห้องนี้', 'error');
+        return;
+      }
+
       // Check if students already exist
       const existingStudents = allRecords.filter(r => r.classroom === currentClassroom);
       const existingNames = new Set(existingStudents.map(r => r.student_name));
       
-      const studentsToAdd = DEFAULT_STUDENTS_P1_5.filter(name => !existingNames.has(name));
+      const studentsToAdd = defaultStudents.filter(name => !existingNames.has(name));
 
       if (studentsToAdd.length === 0) {
         showToast('รายชื่อถูกโหลดไว้แล้ว', 'error');
@@ -412,10 +607,14 @@
       document.getElementById('attendance-screen').style.display = 'block';
       document.getElementById('current-classroom-title').textContent = currentClassroom;
       
-      // Show load default button only for ป.1/5
+      // Show load default button for classrooms with default student lists
       const loadDefaultSection = document.getElementById('load-default-section');
-      if (currentClassroom === 'ป.1/5') {
+      const loadDefaultTitle = document.getElementById('load-default-title');
+      const defaultStudents = getDefaultStudents(currentClassroom);
+      
+      if (defaultStudents.length > 0) {
         loadDefaultSection.style.display = 'block';
+        loadDefaultTitle.textContent = `🎯 โหลดรายชื่อเริ่มต้น ${currentClassroom}`;
       } else {
         loadDefaultSection.style.display = 'none';
       }
@@ -447,19 +646,19 @@
 
       container.innerHTML = '';
       
-      uniqueStudents.forEach(studentName => {
+      uniqueStudents.forEach((studentName, index) => {
         const todayRecord = allRecords.find(r => 
           r.classroom === currentClassroom && 
           r.student_name === studentName && 
           r.date === currentDate
         );
 
-        const div = createStudentElement(studentName, todayRecord);
+        const div = createStudentElement(studentName, todayRecord, index + 1);
         container.appendChild(div);
       });
     }
 
-    function createStudentElement(studentName, record) {
+    function createStudentElement(studentName, record, studentNumber) {
       const currentStatus = record ? record.status : STATUS_PRESENT;
 
       const div = document.createElement('div');
@@ -468,7 +667,7 @@
       const nameDiv = document.createElement('div');
       nameDiv.className = 'flex-1';
       nameDiv.innerHTML = `
-        <p class="font-medium text-gray-800">${studentName}</p>
+        <p class="font-medium text-gray-800"><span class="inline-block w-8 text-purple-600 font-bold">${studentNumber}.</span>${studentName}</p>
         <p class="text-sm text-gray-500">${currentClassroom}</p>
       `;
 
@@ -578,5 +777,5 @@
     // Start the app
     initializeApp();
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a7b86f962c6fcf0',t:'MTc2NDY4NTg3OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a7bc03ff6fd894c',t:'MTc2NDY4ODIyNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
